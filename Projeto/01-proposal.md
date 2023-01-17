@@ -1,6 +1,6 @@
 # **CSI606-2021-02 - Remoto - Proposta de Trabalho Final**
 
-## *Aluno: Yuri da Silva Ribero*
+## *Aluno: Yuri da Silva Ribeiro*
 
 --------------
 
@@ -13,12 +13,12 @@
 <!-- Apresentar o tema. -->
 ### 1. Tema
 
-  O trabalho final tem como tema o desenvolvimento de ...
+  O trabalho final tem como tema ...
 
 <!-- Descrever e limitar o escopo da aplicação. -->
 ### 2. Escopo
 
-  Este projeto terá as seguintes funcionalidades...
+  Este projeto terá as seguintes funcionalidades ...
 
 <!-- Apresentar restrições de funcionalidades e de escopo. -->
 ### 3. Restrições
