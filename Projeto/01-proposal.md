@@ -28,7 +28,7 @@
 <!-- Construir alguns protótipos para a aplicação, disponibilizá-los no Github e descrever o que foi considerado. //-->
 ### 4. Protótipo
 
-  Protótipos para as páginas web e mobile foram elaborados, e podem ser encontrados em https://www.figma.com/file/z1F5DX78DwKzAKsEME7du9/FormulaBet?node-id=0%3A1&t=DOPvPRrBDk1OZiJY-0
+
 
 ### 5. Referências
 
