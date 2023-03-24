@@ -24,5 +24,5 @@ async function bootstrap(){
 bootstrap()
 
 /*
-
+As funcionalidades podem ser testadas no Insomnia.
 */ 
