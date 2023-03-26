@@ -1,0 +1,87 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Estado {
+  id          String        @id @default(cuid())
+  nome        String        
+  sigla       String        
+  created_at  DateTime      @default(now())
+  updated_at  DateTime      @updatedAt
+  cidades     Cidade[]
+
+  @@unique([nome, sigla])
+}
+
+model Cidade {
+  id            String          @id @default(cuid())
+  nome          String
+  estado_id     String
+  estado        Estado          @relation(fields: [estado_id], references: [id],onUpdate: Cascade, onDelete: Cascade)
+  created_at    DateTime        @default(now())
+  updated_at    DateTime        @updatedAt
+  locais_coleta LocaisColeta[]
+  pessoas       Pessoa[]
+}
+
+model LocaisColeta {
+  id          String    @id @default(cuid())
+  nome        String
+  rua         String
+  numero      String
+  complemento String?
+  cidade_id   String
+  cidade      Cidade    @relation(fields: [cidade_id], references: [id],onUpdate: Cascade, onDelete: Cascade)
+  created_at  DateTime  @default(now())
+  updated_at  DateTime  @updatedAt
+  doacoes     Doacao[]
+}
+
+
+model Pessoa {
+  id           String          @id @default(cuid())
+  nome         String
+  rua          String
+  numero       String
+  complemento  String?
+  documento    String          @unique
+  cidade_id    String
+  cidade       Cidade          @relation(fields: [cidade_id], references: [id],onUpdate: Cascade, onDelete: Cascade)
+  tipo_sangue  TipoSanguineo?  @relation(fields: [tipo_id], references: [id],onUpdate: Cascade, onDelete: Cascade)
+  tipo_id      String?
+  created_at   DateTime        @default(now())
+  updated_at   DateTime        @updatedAt
+  doacoes      Doacao[]
+}
+
+model TipoSanguineo {
+  id         String     @id @default(cuid())
+  tipo       String
+  fator      String
+  created_at DateTime   @default(now())
+  updated_at DateTime   @updatedAt
+  pessoas    Pessoa[]
+}
+
+model Doacao {
+  id          String    @id @default(cuid())
+  pessoa_id   String
+  pessoa      Pessoa    @relation(fields: [pessoa_id], references: [id],onUpdate: Cascade, onDelete: Cascade)
+  local_id    String
+  local       LocaisColeta @relation(fields: [local_id], references: [id],onUpdate: Cascade, onDelete: Cascade)
+  data        DateTime
+  created_at  DateTime  @default(now())
+  updated_at  DateTime  @updatedAt
+}
+
+
+
+

@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prisma": "^4.11.0",
+    "tsx": "^3.12.6",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.2.1",
+    "@prisma/client": "^4.11.0",
+    "fastify": "^4.15.0",
+    "fastify-cors": "^6.1.0",
+    "short-unique-id": "^4.4.4",
+    "zod": "^3.21.4"
+  }
+}
