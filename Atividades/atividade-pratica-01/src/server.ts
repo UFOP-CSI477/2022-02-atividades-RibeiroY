@@ -5,6 +5,8 @@ import { stateRoutes } from "./stateRoutes"
 import { cityRoutes } from "./cityRoutes"
 import { coletaRoutes } from "./coletaRoutes"
 import { tipoRoutes } from "./tipoRoutes"
+import { pessoaRoutes } from "./pessoaRoutes"
+import { doacaoRoutes } from "./doacaoRoutes"
 
 async function bootstrap(){
     const fastify = Fastify({ logger: true })
@@ -15,6 +17,8 @@ async function bootstrap(){
     await fastify.register(cityRoutes)
     await fastify.register(coletaRoutes)
     await fastify.register(tipoRoutes)
+    await fastify.register(pessoaRoutes)
+    await fastify.register(doacaoRoutes)
     await fastify.listen({port: 3000})
     
     
@@ -24,5 +28,5 @@ async function bootstrap(){
 bootstrap()
 
 /*
-As funcionalidades podem ser testadas no Insomnia.
+
 */ 
