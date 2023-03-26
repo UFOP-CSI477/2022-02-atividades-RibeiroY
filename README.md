@@ -2,11 +2,11 @@
 
 ## Atualize os seus dados
 
-- Nome:
-- Matrícula:
-- Curso:
-- Semestre/Ano correntes:
-- Link para o seu GitHub:
+- Nome: Yuri da Silva Ribeiro
+- Matrícula:20.1.8030
+- Curso:Sistemas de informação
+- Semestre/Ano correntes:2022/2
+- Link para o seu GitHub: https://github.com/ribeiroy
 
 ## [Projeto final:](./Projeto/README.md)
 
